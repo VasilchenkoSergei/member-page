@@ -1,0 +1,17 @@
+mixin nav-link(name, iconLink)
+	li.main-nav__item
+		a(href='#').main-nav__link #{name}
+			svg.page-header__logo-icon(width="24" height="24")
+				use(xlink:href=`../img/icons/${iconLink}.svg`)
+
+nav.main-nav
+	ul.main-nav__list
+		+nav-link('Платежные документы', 'platezhi')
+		+nav-link('Валютные переводы', 'perevodi')
+		+nav-link('Конвертация', 'konvertaciya')
+		+nav-link('Кредиты', 'krediti')
+		+nav-link('Депозиты', 'depoziti')
+		+nav-link('Сотрудники', 'sotrudniki')
+		+nav-link('Контрагенты', 'agenti')
+
+

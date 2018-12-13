@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "FiraSans";
+  src: url("../fonts/FiraSans/FiraSans-Regular.woff2") format("woff2"),
+       url("../fonts/FiraSans/FiraSans-Regular.woff") format("woff"),
+       url("../fonts/FiraSans/FiraSans-Regular.tff") format("ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "FiraSans";
+  src: url("../fonts/FiraSans/FiraSans-Light.woff2") format("woff2"),
+       url("../fonts/FiraSans/FiraSans-Light.woff") format("woff"),
+       url("../fonts/FiraSans/FiraSans-Light.tff") format("ttf");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "FiraSans";
+  src: url("../fonts/FiraSans/FiraSans-Medium.woff2") format("woff2"),
+       url("../fonts/FiraSans/FiraSans-Medium.woff") format("woff"),
+       url("../fonts/FiraSans/FiraSans-Medium.tff") format("ttf");
+  font-style: normal;
+  font-weight: 500;
+}
