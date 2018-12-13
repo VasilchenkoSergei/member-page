@@ -1,0 +1,58 @@
+.deposit {
+  grid-area: block2;
+  background-color: #fff;
+  height: 390px;
+  padding-top: 153px;
+
+  &__container {
+    position: relative;
+  }
+
+  &__goback {
+    position: absolute;
+    border: 1px solid red;
+    width: 24px;
+    height: 8px;
+    left: 0;
+    top: -55px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 50px;
+    box-shadow: 0 10px 40px rgba(24, 151, 216, 0.2);
+    border-radius: 25px;
+    background-color: #fff;
+    border: none;
+    transition: background-color 0.5s;
+    line-height: 50px;
+
+    &:hover {
+      background-color: $main-hover-clr;
+      color: #fff;
+    }
+
+    & span {
+      padding-left: 26px;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    letter-spacing: 1.2px;
+    font-weight: 300;
+    margin-bottom: 13px;
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: 0.88rem;
+    color: $name-clr;
+    margin-bottom: 57px;
+  }
+
+  @import 'deposit-info';
+}

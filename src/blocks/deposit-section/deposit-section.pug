@@ -3,19 +3,8 @@ section.deposit
 		a(href="#").deposit__goback
 			svg.deposit__goback-icon(width="24" height="8")
 				use(xlink:href="")
-		button.deposit__close-btn Закрыть досрочно &#10006;
+		button.deposit__close-btn Закрыть досрочно <span>&#10006;</span>
 		h1.deposit__title Депозит "Акционный"
 		span.deposit__subtitle Депозит
-		.deposit__sumup.sumup
-			.sumup__deposit
-				p.sumup__deposit-name Сумма депозита
-				.sumup__deposit-number <span>kzt</span>
-			.sumup__enddate
-				p.sumup__enddate-name Дата окончания
-				.sumup__enddate-number 20.08.2019
-			.sumup__bonus
-				p.sumup__bonus-name Следующее вознаграждение
-				.sumup__bonus-number 20.04.2018
-			.sumup__rate
-				p.sumup__rate-name Ставка
-				.sumup__rate-number 8%
+		.deposit__info.deposit-info
+			include deposit-info.pug

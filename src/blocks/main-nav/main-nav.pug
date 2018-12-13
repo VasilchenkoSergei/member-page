@@ -1,8 +1,9 @@
 mixin nav-link(name, iconLink)
 	li.main-nav__item
-		a(href='#').main-nav__link #{name}
-			svg.page-header__logo-icon(width="24" height="24")
+		a(href='#').main-nav__link
+			svg.main-nav__logo-icon(width="24" height="24")
 				use(xlink:href=`../img/icons/${iconLink}.svg`)
+			p.main-nav__link-name #{name}
 
 nav.main-nav
 	ul.main-nav__list

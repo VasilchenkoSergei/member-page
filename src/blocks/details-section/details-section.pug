@@ -1,2 +1,9 @@
-include details-header.pug
-include bank-account.pug
+section.details
+	.details__container.container
+		h2.details__title Детали депозита
+		button.details__btn-save Сохранить выписку
+			svg.details__btn-icon(width="24" height="8")
+				use(xlink:href="")
+		include time-block.pug
+		include details-total.pug
+		include account-list/account-list.pug

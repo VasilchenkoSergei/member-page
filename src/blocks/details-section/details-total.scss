@@ -1,0 +1,37 @@
+.details-total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &__block-name {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    color: $name-clr;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  &__block-number {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.36px;
+
+    & span {
+      font-size: 0.88rem;
+      line-height: 0.21px;
+    }
+  }
+
+  &__plus {
+    color: $plus-clr;
+  }
+
+  &__minus {
+    color: $minus-clr;
+  }
+
+  &__outcome {
+    color: $outcome-clr;
+  }
+}
