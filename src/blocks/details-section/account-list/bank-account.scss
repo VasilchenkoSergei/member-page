@@ -10,6 +10,7 @@
   padding-right: 20px;
   max-width: 1160px;
   position: relative;
+  margin-bottom: 10px;
 
   &__item {
     font-size: 0.88rem;
@@ -28,6 +29,11 @@
 
   &__org {
     width: 25%;
+
+    & span {
+      color: $name-clr;
+      font-size: 0.88rem;
+    }
   }
 
   &__reason {
@@ -36,6 +42,7 @@
 
   &__summ {
     width: 15%;
+    min-width: 200px;
     font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: 0.36px;

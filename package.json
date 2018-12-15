@@ -49,6 +49,7 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "normalize-scss": "^7.0.1",
     "normalize.css": "^8.0.1"
   }
 }

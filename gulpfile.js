@@ -58,7 +58,7 @@ exports.styles = styles;
 // exports.copyHTML = copyHTML;
 
 function copyImg() {
-  return src(`${dir.src}/img/**/*.{jpg,jpeg,png,gif,svg,webp}`)
+  return src(`${dir.src}/img/**/*.{jpg,jpeg,png,gif,svg,webp,json}`)
     .pipe(plumber())
     .pipe(dest(`${dir.build}/img`));
 }

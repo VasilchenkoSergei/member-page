@@ -13,6 +13,10 @@
     align-items: center;
     display: flex;
 
+    &:hover .page-header__toggle .burgerline {
+      background-color: $main-hover-clr;
+    }
+
     @media (min-width: $screen-xl) {
       display: none;
     }
@@ -25,8 +29,8 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: transparent;
-    border: 1px solid red;
     margin: 0 auto;
+    border: none;
   }
 
   &__block2 {
@@ -190,14 +194,14 @@
 }
 
 .burgerline {
-  height: 1px;
-  background-color: red;
+  height: 2px;
+  background-color: $name-clr;
 }
 
 .burgerline-1, .burgerline-3 {
-  width: 100%;
+  width: 20px;
 }
 
 .burgerline-2 {
-  width: 70%;
+  width: 15px;
 }
