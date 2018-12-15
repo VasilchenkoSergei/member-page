@@ -29,6 +29,13 @@ const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const postcss = require('gulp-postcss');
 
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
+const svgmin = require('gulp-svgmin');
+const svgstore = require('gulp-svgstore');
+
+
+
 function styles() {
   return src(`${dir.src}/scss/style.scss`)
     .pipe(plumber())
@@ -127,11 +134,57 @@ function pugHTML() {
 }
 exports.pugHTML = pugHTML;
 
+function svgSprite() {
+  return src(`${dir.src}/img/icons/*.svg`)
+    .pipe(svgmin(function (file) {
+      return {
+        plugins: [{
+          cleanupIDs: {
+            minify: true
+          }
+        }]
+      }
+    }))
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(rename('sprite.svg'))
+    .pipe(dest(`${dir.build}/img`));
+}
+exports.svgSprite = svgSprite;
 
 
+// function svg() {
+//   return src(`${dir.src}/img/icons/*.svg`)
+//       .pipe(svgmin({
+//         js2svg: {
+//           pretty: true
+//         }
+//       }))
+//       .pipe(cheerio({
+//         run: function($) {
+//           $('[fill]').removeAttr('fill');
+//           $('[stroke]').removeAttr('stroke');
+//           $('[style]').removeAttr('style');
+//           // $('[xmlns]').removeAttr('xmlns');
+//           // $('[xmlns:xlink]').removeAttr('xmlns:xlink');
+//           // $('[xlink:href]').removeAttr('xlink:href');
+//           $('svg').attr('style', 'display:none');
+//         },
+//         parserOptions: { xmlMode: true }
+//       }))
+//       .pipe(replace('&gt;', '>'))
+//       .pipe(svgSprite({
+//         mode: {
+//           symbol: {
+//             sprite: "sprite.svg"
+//           }
+//         }
+//       }))
+//       .pipe(dest(`${dir.build}/img`))
+// }
+// exports.svg = svg;
 
 exports.default = series(
   clean, 
-  parallel(copyImg, copyFonts, pugHTML, javascript, styles),
+  parallel(copyImg, copyFonts, pugHTML, svgSprite, javascript, styles),
   serve
 );

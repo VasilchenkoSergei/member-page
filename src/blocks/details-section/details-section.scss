@@ -23,15 +23,11 @@
     border: none;
     right: 0;
     line-height: 50px;
-    transition: background-color 0.5s;
+    transition: all 0.5s;
 
     &:hover {
       background-color: $main-hover-clr;
       color: #fff;
     }
   }
-
-  @import 'time-block';
-  @import 'details-total';
-  @import 'account-list/account-list';
 }

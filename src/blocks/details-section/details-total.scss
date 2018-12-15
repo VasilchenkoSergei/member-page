@@ -3,6 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 75px;
+
+  &__block {
+    width: 23%;
+    border-top: 2px solid #e4e6eb;
+    padding-top: 40px;
+  }
 
   &__block-name {
     font-size: 0.75rem;
@@ -10,6 +17,7 @@
     color: $name-clr;
     margin-bottom: 20px;
     font-weight: 500;
+    text-transform: uppercase;
   }
 
   &__block-number {
@@ -32,6 +40,17 @@
   }
 
   &__outcome {
+    padding-left: 20px;
     color: $outcome-clr;
+    position: relative;
+
+    &:before {
+      content: '=';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: 0;
+      color: $outcome-clr;
+    }
   }
 }

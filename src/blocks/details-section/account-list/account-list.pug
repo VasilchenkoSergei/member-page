@@ -1,10 +1,10 @@
 section.account-list
-	.account-list__container.container
+	.account-list__container
 		.account-list__header
-			.account-list__header-name Номер
-			.account-list__header-name Дата
-			.account-list__header-name Контрагент
-			.account-list__header-name Назначение
-			.account-list__header-name Сумма
+			.account-list__header-name.account-list__header-num Номер
+			.account-list__header-name.account-list__header-date Дата
+			.account-list__header-name.account-list__header-org Контрагент
+			.account-list__header-name.account-list__header-reason Назначение
+			.account-list__header-name.account-list__header-summ Сумма
 		div(id='account-list__items').account-list__items
 			include bank-account.pug

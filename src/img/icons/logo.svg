@@ -1,1 +1,2 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50"><defs><path id="rflpa" d="M30 80V30h50v50z"/></defs><g><g transform="translate(-30 -30)"></g></g></svg>
+<svg>
+<symbol id="logo" width="50" height="50" viewBox="0 0 50 50"><defs><path d="M30 80V30h50v50z"/></defs><g><g transform="translate(-30 -30)"></g></g></symbol></svg>

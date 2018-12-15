@@ -1,0 +1,49 @@
+.account-list {
+  margin-bottom: 210px;
+
+  &__header {
+    width: 100%;
+    max-width: 1160px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 auto 20px auto;
+    padding: 0 20px;
+    position: relative;
+
+    &-name {
+      color: $name-clr;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 1.2px;
+    }
+
+    &-num {
+      width: 10%;
+    }
+
+    &-date {
+      width: 15%;
+    }
+
+    &-org {
+      width: 25%;
+    }
+
+    &-reason {
+      width: 35%;
+    }
+
+    &-summ {
+      width: 15%;
+      text-align: right;
+      position: absolute;
+      right: 0;
+      padding-right: 20px;
+    }
+
+
+  }
+}
+

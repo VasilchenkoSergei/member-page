@@ -50,9 +50,9 @@ document.querySelector('.time-block__btn').onclick = function() {
 };
 
 function outcomeCount() {
-  const incomeNum = getElementById('details-total__income').textContent.parseInt;
-  const plusNum = getElementById('details-total__plus').textContent.parseInt;
-  const minusNum = getElementById('details-total__minus').textContent.parseInt;
+  const incomeNum = getElementById('details-total__income').innerHTML.parseFloat;
+  const plusNum = getElementById('details-total__plus').innerHTML.parseFloat;
+  const minusNum = getElementById('details-total__minus').innerHTML.parseFloat;
 
   const outcome = incomeNum + plusNum + minusNum;
 
@@ -61,4 +61,5 @@ function outcomeCount() {
 }
 
 
+const accountSumm = document.querySelectorAll('.bank-account__summ')
 
