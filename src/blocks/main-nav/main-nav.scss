@@ -1,8 +1,13 @@
 main {
+  position: relative;
   display: grid;
   grid-template-rows: 390px 1fr;
   grid-template-areas: "block2"
                        "block3";
+
+  @media (max-width: $screen-s) {
+    display: block;
+  }
 
   @media (min-width: $screen-xl) {
     grid-template-columns: 100px 1fr;
@@ -17,6 +22,69 @@ main {
 
 .main-nav {
   display: none;
+
+  @media (max-width: $screen-m) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 20;
+    background-color: #fff;
+    padding-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid $btn-clr;
+    
+  }
+
+  @media (min-width: $screen-m) {
+    position: absolute;
+    width: 400px;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: #fff;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    padding-top: 50px;
+
+    &__item {
+      height: 70px;
+      line-height: 70px;
+
+      &:hover {
+        background-image: linear-gradient(to left, #f5f6fa 0%, #ffffff 100%);
+        border-right: 2px solid $main-hover-clr;
+
+        & .main-nav__link-name {
+          color: $main-hover-clr;
+        }
+
+        & .main-nav__logo-icon {
+          fill: $main-hover-clr;
+        }
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+    }
+
+    &__link-name {
+      display: inline;
+      font-size: 0.88rem;
+      color: $font-clr;
+      line-height: 70px;
+      padding-left: 40px;
+    }
+
+    &__logo-icon {
+      width: 24px;
+      height: 24px;
+      border: 1px solid red;
+    }
+  }
 
   @media (min-width: $screen-xl) {
     grid-area: block1;

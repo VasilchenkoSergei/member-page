@@ -1,6 +1,30 @@
 .account-list {
   margin-bottom: 210px;
 
+  @media (max-width: $screen-s) {
+    margin-bottom: 40px;
+  }
+
+  &__container {
+
+    @media (max-width: $screen-s) {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      grid-template-areas: "block1 block2";
+    }
+  }
+
+  &__items {
+
+    @media (max-width: $screen-s) {
+      display: flex;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      margin: 0;
+    }
+    
+  }
+
   &__header {
     width: 100%;
     max-width: 1160px;
@@ -10,6 +34,17 @@
     margin: 0 auto 20px auto;
     padding: 0 20px;
     position: relative;
+
+    @media (max-width: $screen-s) {
+      // width: 500px;
+      // overflow-x: hidden;
+      grid-area: block1;
+      flex-direction: column;
+      height: 460px;
+      padding-left: 0;
+      margin: 0;
+      padding-top: 35px;
+    }
 
     &-name {
       color: $name-clr;
@@ -78,6 +113,10 @@
         &:before {
           right: 90px;
         }
+      }
+      
+      @media (max-width: $screen-s) {
+        position: static;
       }
 
       @media (min-width: $screen-l) {

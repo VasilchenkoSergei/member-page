@@ -70,6 +70,10 @@ body {
 .container {
   width: calc(100% - 80px);
   margin: 0 auto;
+
+  @media (max-width: $screen-s) {
+    width: calc(100% - 40px);
+  }
 }
 
 @import '../blocks/header/header';

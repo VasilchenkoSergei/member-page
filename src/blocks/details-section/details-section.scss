@@ -2,6 +2,10 @@
   grid-area: block3;
   padding-top: 100px;
 
+  @media (max-width: $screen-s) {
+    padding-top: 50px;
+  }
+
   &__container {
     position: relative;
   }
@@ -11,6 +15,12 @@
     letter-spacing: 0.8px;
     font-weight: 300;
     margin-bottom: 55px;
+
+    @media (max-width: $screen-s) {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
   }
 
   &__btn-save {
@@ -24,6 +34,12 @@
     right: 0;
     line-height: 50px;
     transition: all 0.5s;
+
+    @media (max-width: $screen-s) {
+      left: 0;
+      margin: auto;
+      top: 140px;
+    }
 
     &:hover {
       background-color: $main-hover-clr;

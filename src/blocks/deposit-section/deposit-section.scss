@@ -1,8 +1,12 @@
 .deposit {
   grid-area: block2;
   background-color: #fff;
-  height: 390px;
-  padding-top: 153px;
+  padding-top: 140px;
+
+  @media (max-width: $screen-s) {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
 
   &__container {
     position: relative;
@@ -15,6 +19,10 @@
     height: 8px;
     left: 0;
     top: -55px;
+
+    @media (max-width: $screen-s) {
+      top: -20px;
+    }
   }
 
   &__close-btn {
@@ -39,6 +47,12 @@
     & span {
       padding-left: 26px;
     }
+
+    @media (max-width: $screen-s) {
+      top: 130px;
+      left: 0;
+      margin: auto;
+    }
   }
 
   &__title {
@@ -46,6 +60,11 @@
     letter-spacing: 1.2px;
     font-weight: 300;
     margin-bottom: 13px;
+    margin-top: 0;
+
+    @media (max-width: $screen-s) {
+      font-size: 2rem;
+    }
   }
 
   &__subtitle {
@@ -53,6 +72,10 @@
     font-size: 0.88rem;
     color: $name-clr;
     margin-bottom: 57px;
+
+    @media (max-width: $screen-s) {
+      margin-bottom: 100px;
+    }
   }
 
   @import 'deposit-info';

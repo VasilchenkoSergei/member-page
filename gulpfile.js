@@ -71,6 +71,12 @@ function copyFonts() {
 }
 exports.copyFonts = copyFonts;
 
+function copyJS() {
+  return src(`${dir.src}/js/*jquery*.js`)
+    .pipe(dest(`${dir.build}/js`));
+}
+exports.copyJS = copyJS;
+
 function javascript() {
   return src(`${dir.src}/js/script.js`)
       .pipe(plumber())
@@ -185,6 +191,6 @@ exports.svgSprite = svgSprite;
 
 exports.default = series(
   clean, 
-  parallel(copyImg, copyFonts, pugHTML, svgSprite, javascript, styles),
+  parallel(copyImg, copyFonts, pugHTML, svgSprite, copyJS, javascript, styles),
   serve
 );

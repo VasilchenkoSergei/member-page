@@ -41,6 +41,19 @@
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 40px;
+
+    @media (max-width: $screen-s) {
+      width: 35%;
+      padding: 0;
+    }
+  }
+
+  &__logo-link {
+
+    @media (max-width: $screen-s) {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   &__logo-icon {
@@ -69,6 +82,10 @@
       padding-left: 23px;
       font-size: 1rem;
     }
+
+    @media (max-width: $screen-s) {
+      display: none;
+    }
   }
 
   &__block3 {
@@ -80,6 +97,11 @@
     justify-content: space-between;
     padding-left: 40px;
     padding-right: 67px;
+
+    @media (max-width: $screen-s) {
+      display: none;
+      
+    }
   }
 
   &__settings-icon {
@@ -154,7 +176,7 @@
       position: absolute;
       width: 16px;
       height: 16px;
-      background-image: url(../img/icons/image_descr.svg);
+      background-image: url(../img/icons/round_arrow.svg);
       bottom: 0;
       right: 0;
     }
