@@ -29,11 +29,6 @@ const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const postcss = require('gulp-postcss');
 
-const cheerio = require('gulp-cheerio');
-const replace = require('gulp-replace');
-const svgmin = require('gulp-svgmin');
-const svgstore = require('gulp-svgstore');
-
 
 
 function styles() {
@@ -49,13 +44,6 @@ function styles() {
     .pipe(browserSync.stream());
 }
 exports.styles = styles;
-
-// function copyHTML() {
-//   return src(`${dir.src}/*.html`)
-//     .pipe(plumber())
-//     .pipe(dest(dir.build));
-// }
-// exports.copyHTML = copyHTML;
 
 function copyImg() {
   return src(`${dir.src}/img/**/*.{jpg,jpeg,png,gif,svg,webp,json}`)
@@ -97,9 +85,9 @@ function javascript() {
             }
           ]
         },
-        // externals: {
-        //   jquery: 'jQuery'
-        // }
+      //   // externals: {
+      //   //   jquery: 'jQuery'
+      //   // }
       }))
       .pipe(dest(`${dir.build}/js`))
       .pipe(uglify())
@@ -122,7 +110,6 @@ function serve() {
   });
   watch([`${dir.src}/scss/**/*.scss`,
          `${dir.src}/blocks/**/*.scss`], { delay: 100 }, styles);
-  // watch(`${dir.src}/*.html`).on('change', series(copyHTML, browserSync.reload));
   watch([`${dir.src}/pug/**/*.pug`,
          `${dir.src}/blocks/**/*.pug`]).on('change', series(pugHTML, browserSync.reload));
   watch(`${dir.src}/js/**/*.js`).on('change', series(javascript, browserSync.reload));
@@ -140,57 +127,8 @@ function pugHTML() {
 }
 exports.pugHTML = pugHTML;
 
-function svgSprite() {
-  return src(`${dir.src}/img/icons/*.svg`)
-    .pipe(svgmin(function (file) {
-      return {
-        plugins: [{
-          cleanupIDs: {
-            minify: true
-          }
-        }]
-      }
-    }))
-    .pipe(svgstore({ inlineSvg: true }))
-    .pipe(rename('sprite.svg'))
-    .pipe(dest(`${dir.build}/img`));
-}
-exports.svgSprite = svgSprite;
-
-
-// function svg() {
-//   return src(`${dir.src}/img/icons/*.svg`)
-//       .pipe(svgmin({
-//         js2svg: {
-//           pretty: true
-//         }
-//       }))
-//       .pipe(cheerio({
-//         run: function($) {
-//           $('[fill]').removeAttr('fill');
-//           $('[stroke]').removeAttr('stroke');
-//           $('[style]').removeAttr('style');
-//           // $('[xmlns]').removeAttr('xmlns');
-//           // $('[xmlns:xlink]').removeAttr('xmlns:xlink');
-//           // $('[xlink:href]').removeAttr('xlink:href');
-//           $('svg').attr('style', 'display:none');
-//         },
-//         parserOptions: { xmlMode: true }
-//       }))
-//       .pipe(replace('&gt;', '>'))
-//       .pipe(svgSprite({
-//         mode: {
-//           symbol: {
-//             sprite: "sprite.svg"
-//           }
-//         }
-//       }))
-//       .pipe(dest(`${dir.build}/img`))
-// }
-// exports.svg = svg;
-
 exports.default = series(
   clean, 
-  parallel(copyImg, copyFonts, pugHTML, svgSprite, copyJS, javascript, styles),
+  parallel(copyImg, copyFonts, pugHTML, copyJS, javascript, styles),
   serve
 );

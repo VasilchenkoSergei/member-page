@@ -23,6 +23,20 @@ main {
 .main-nav {
   display: none;
 
+  &__item {
+    
+    @media (max-width: $screen-m) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__logo-icon {
+
+    @media (max-width: $screen-m) {
+      display:  none;
+    }
+  }
+
   @media (max-width: $screen-m) {
     position: absolute;
     top: 0;
@@ -34,6 +48,7 @@ main {
     padding-bottom: 30px;
     text-align: center;
     border-bottom: 2px solid $btn-clr;
+    padding-top: 30px;
     
   }
 
@@ -67,8 +82,7 @@ main {
     }
 
     &__link {
-      display: flex;
-      align-items: center;
+      display: block;
     }
 
     &__link-name {
@@ -82,7 +96,7 @@ main {
     &__logo-icon {
       width: 24px;
       height: 24px;
-      border: 1px solid red;
+      fill: $name-clr;
     }
   }
 
@@ -125,16 +139,11 @@ main {
     &__link {
       display: flex;
       align-items: center;
+      padding-top: 23px;
     }
 
     &__link-name {
       display: none;
-    }
-
-    &__logo-icon {
-      width: 24px;
-      height: 24px;
-      border: 1px solid red;
     }
   }
 

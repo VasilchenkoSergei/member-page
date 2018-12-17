@@ -34,6 +34,7 @@
     right: 0;
     line-height: 50px;
     transition: all 0.5s;
+    padding-right: 20px;
 
     @media (max-width: $screen-s) {
       left: 0;
@@ -41,9 +42,22 @@
       top: 140px;
     }
 
+    @media (max-width: $screen-m) {
+      width: 230px;
+    }
+
     &:hover {
       background-color: $main-hover-clr;
       color: #fff;
     }
+  }
+
+  &__btn-icon {
+    fill: $name-clr;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 40px;
   }
 }

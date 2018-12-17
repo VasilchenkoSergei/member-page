@@ -14,11 +14,15 @@
 
   &__goback {
     position: absolute;
-    border: 1px solid red;
     width: 24px;
     height: 8px;
     left: 0;
     top: -55px;
+    fill: $main-hover-clr;
+
+    &:hover {
+      fill: $name-clr;
+    }
 
     @media (max-width: $screen-s) {
       top: -20px;
@@ -62,7 +66,7 @@
     margin-bottom: 13px;
     margin-top: 0;
 
-    @media (max-width: $screen-s) {
+    @media (max-width: $screen-m) {
       font-size: 2rem;
     }
   }

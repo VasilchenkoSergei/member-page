@@ -3,23 +3,22 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-  height: 90px;
+  height: auto;
   border-radius: 4px;
   background-color: #fff;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-bottom: 30px;
   max-width: 1160px;
   position: relative;
-  margin-bottom: 10px;
+  padding: 20px 30px;
 
   @media (max-width: $screen-s) {
-    // width: 500px;
-    // overflow-x: hidden;
     grid-area: block2;
     flex-direction: column;
     height: 500px;
     padding-left: 5px;
     margin-right: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   &__item {
@@ -30,12 +29,10 @@
 
     @media (max-width: $screen-s) {
       height: 80px;
-      overflow-y: scroll;
+      overflow-y: hidden;
       display: inline-block;
       vertical-align: middle;
       text-align: center;
-      
-      
     }
   }
 

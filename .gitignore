@@ -1,4 +1,4 @@
-build/*
+
 !build/readme.md
 src/less/sprite.less
 design/
