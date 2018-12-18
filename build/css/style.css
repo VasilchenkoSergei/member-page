@@ -427,7 +427,8 @@ body {
     font-size: 0.88rem;
     letter-spacing: 0.28 px;
     -webkit-transition: all 0.4s;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    cursor: pointer; }
     .page-header__payment:hover {
       background-color: #f4d4e4; }
     .page-header__payment span {
@@ -459,12 +460,11 @@ body {
     display: 22px;
     height: 22px;
     fill: #8b93a6; }
-    .page-header__settings-icon:hover {
-      fill: #1897d8; }
   .page-header__msg-btn {
     width: 24px;
     height: 24px;
     position: relative;
+    cursor: pointer;
     fill: #8b93a6;
     background-color: transparent;
     border: none; }
@@ -732,7 +732,8 @@ main {
     transition: background-color 0.5s;
     line-height: 50px;
     -webkit-transition: all 0.4s;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    cursor: pointer; }
     .deposit__close-btn:hover {
       background-color: #1897d8;
       color: #fff; }
@@ -847,7 +848,8 @@ main {
     line-height: 50px;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
-    padding-right: 20px; }
+    padding-right: 20px;
+    cursor: pointer; }
     @media (max-width: 767px) {
       .details__btn-save {
         left: 0;
@@ -1127,15 +1129,23 @@ main {
         width: 100%;
         line-height: 80px; } }
   .bank-account__org {
-    width: 25%; }
+    width: 26%;
+    padding-right: 30px; }
     .bank-account__org span {
       color: #8b93a6;
       font-size: 0.88rem; }
+    @media (max-width: 1279px) {
+      .bank-account__org {
+        width: 25%;
+        padding-right: 10px; } }
     @media (max-width: 767px) {
       .bank-account__org {
         width: 100%; } }
   .bank-account__reason {
-    width: 35%; }
+    width: 32%; }
+    @media (max-width: 1279px) {
+      .bank-account__reason {
+        width: 35%; } }
     @media (max-width: 767px) {
       .bank-account__reason {
         width: 100%; } }

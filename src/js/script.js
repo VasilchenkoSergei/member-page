@@ -50,7 +50,7 @@ document.querySelector('.time-block__btn-week').onclick = function() {
 
   $.ajax('https://api.myjson.com/bins/x1x8c')
     .done(data => {
-    loadData(data)
+    loadData(data);
   })
     .fail(function() {
     console.log('error');

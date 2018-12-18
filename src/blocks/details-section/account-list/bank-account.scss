@@ -55,11 +55,17 @@
   }
 
   &__org {
-    width: 25%;
+    width: 26%;
+    padding-right: 30px;
 
     & span {
       color: $name-clr;
       font-size: 0.88rem;
+    }
+
+    @media (max-width: $screen-l) {
+      width: 25%;
+      padding-right: 10px;
     }
 
      @media (max-width: $screen-s) {
@@ -68,8 +74,11 @@
   }
 
   &__reason {
-    width: 35%;
+    width: 32%;
 
+    @media (max-width: $screen-l) {
+      width: 35%;
+    }
      @media (max-width: $screen-s) {
       width: 100%;
     }
